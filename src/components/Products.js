@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import formatCurrency from '../utils'
+import Fade from 'react-reveal/Fade'
 
 export default class Products extends Component {
     render() {
         return (
             <div>
+                <Fade bottom cascade={true} >
                 <u className="products">
                     {this.props.products.map(product => (
 
@@ -27,7 +29,7 @@ export default class Products extends Component {
                     ))}
 
                 </u>
-
+                </Fade>
             </div>
         )
     }
